@@ -1,26 +1,24 @@
 <!DOCTYPE html>
-<html lang="bn">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Send Money to Saddam</title>
   <style>
     body {
-      background-color: #f2f2f2;
-      font-family: Arial, sans-serif;
+      background-color: #111;
+      color: #fff;
+      font-family: sans-serif;
       text-align: center;
-      padding: 40px;
-    }
-    h1 {
-      color: #222;
+      padding-top: 50px;
     }
     .btn {
-      display: inline-block;
-      margin: 20px;
+      display: block;
+      margin: 15px auto;
       padding: 15px 30px;
       font-size: 18px;
       border: none;
-      border-radius: 10px;
+      border-radius: 8px;
       text-decoration: none;
       color: #fff;
       width: 80%;
@@ -32,17 +30,22 @@
     .nagad {
       background-color: #f7941d;
     }
-    p {
-      font-size: 16px;
-      color: #555;
+    .qr {
+      margin-top: 30px;
     }
   </style>
 </head>
 <body>
   <h1>Send Money to Saddam</h1>
   <p>01794741523</p>
-  <a class="btn bkash" href="bKash://payment?phone=01794741523">Send via bKash</a><br>
+
+  <a class="btn bkash" href="bKash://payment?phone=01794741523">Send via bKash</a>
   <a class="btn nagad" href="nagad://sendmoney?msisdn=01794741523">Send via Nagad</a>
-  <p>Scan this from bKash or Nagad app to open Send Money screen.</p>
+
+  <div class="qr">
+    <p>📷 Scan QR using bKash or Nagad app:</p>
+    <img src="https://api.qrserver.com/v1/create-qr-code/?data=bkash://payment?phone=01794741523&size=200x200" alt="bKash QR" />
+    <img src="https://api.qrserver.com/v1/create-qr-code/?data=nagad://sendmoney?msisdn=01794741523&size=200x200" alt="Nagad QR" />
+  </div>
 </body>
 </html>
